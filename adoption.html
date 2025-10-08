@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption - FurFinder</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        .paw-bg { /* Reused from index.html for styling consistency */
+            background-image: url('https://t4.ftcdn.net/jpg/03/28/88/41/360_F_328884184_zcbmGh4NlFLhrRWj83fTDQsQLYY6bbvQ.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        .nav-item:hover { transform: translateY(-2px); }
+        .pet-card:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-16">
+    <nav class="bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+<div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C10.66 2 9.42 2.76 8.78 3.96L4.78 11.12C4.38 11.83 4.2 12.63 4.2 13.5C4.2 16.5 6.7 19 9.7 19C11.5 19 13.06 18.1 14 16.7C14.94 18.1 16.5 19 18.3 19C21.3 19 23.8 16.5 23.8 13.5C23.8 12.63 23.62 11.83 23.22 11.12L19.22 3.96C18.58 2.76 17.34 2 16 2C14.66 2 13.42 2.76 12.78 3.96L12 5.12L11.22 3.96C10.58 2.76 9.34 2 8 2M12 8.5C10.34 8.5 9 7.16 9 5.5C9 3.84 10.34 2.5 12 2.5C13.66 2.5 15 3.84 15 5.5C15 7.16 13.66 8.5 12 8.5Z" opacity="0"/>
+        <path d="M9 10.5a3 3 0 0 0-3 3c0 1.66 1.34 3 3 3h6c1.66 0 3-1.34 3-3a3 3 0 0 0-3-3H9Z" fill="white"/>
+        <circle cx="12" cy="5.5" r="2.5" fill="white"/>
+        <circle cx="6.5" cy="8.5" r="2.5" fill="white"/>
+        <circle cx="17.5" cy="8.5" r="2.5" fill="white"/>
+    </svg>
+</div>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-gray-800">FurFinder</span>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Home </a>
+                        <a href="adoption.html" class="border-amber-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Adoption </a>
+                        <a href="lost_found.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Lost & Found </a>
+                        <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Services </a>
+                        <a href="shelters.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Shelters </a>
+                        <a href="donations.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Donations </a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-4 md:flex md:items-center md:space-x-4">
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-150 ease-in-out"> Sign Up </button>
+                    <button class="border border-amber-500 text-amber-600 hover:bg-amber-50 px-4 py-2 rounded-full text-sm font-medium transition duration-150 ease-in-out"> Login </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10">
+        <div class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-extrabold text-gray-900">Adopt a Furry Friend 🐕🐈</h1>
+                <p class="mt-2 text-lg text-gray-500">Browse pets in your local area waiting for a loving home.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8 grid grid-cols-1 md:grid-cols-4 gap-4">
+                <input type="text" placeholder="Search by name or breed..." class="border p-2 rounded-lg col-span-2">
+                <select class="border p-2 rounded-lg">
+                    <option>All Types</option>
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Bird</option>
+                </select>
+                <button class="bg-amber-600 text-white p-2 rounded-lg hover:bg-amber-700">Apply Filters</button>
+            </div>
+
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://i.redd.it/46cclx00jbke1.jpeg" alt="Golden Retriever">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center">
+                            <h3 class="text-xl font-bold text-gray-900">Buddy</h3>
+                            <div class="ml-auto bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-xs font-medium">Dog</div>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">2yo, Male, Baguio PH</p>
+                        <button class="mt-3 w-full text-sm bg-amber-500 hover:bg-amber-600 text-white px-3 py-2 rounded-full transition duration-150">
+                            Apply to Adopt
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="pet-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.catster.com/wp-content/uploads/2023/11/domestic-mackerel-tabby-cat-lying-on-a-chair-Ana-Iacob-Photography-Shutterstock.jpg" alt="Tabby Cat">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center">
+                            <h3 class="text-xl font-bold text-gray-900">Whiskers</h3>
+                            <div class="ml-auto bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-xs font-medium">Cat</div>
+                        </div>
+                        <p class="mt-1 text-sm text-gray-500">3yo, Female, Agoo PH</p>
+                        <button class="mt-3 w-full text-sm bg-amber-500 hover:bg-amber-600 text-white px-3 py-2 rounded-full transition duration-150">
+                            Apply to Adopt
+                        </button>
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2025 FurFinder. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>feather.replace();</script>
+</body>
+</html>

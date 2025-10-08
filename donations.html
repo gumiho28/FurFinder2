@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations - FurFinder</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .nav-item:hover { transform: translateY(-2px); }
+        .donation-option:hover { 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-16">
+    <nav class="bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+<div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C10.66 2 9.42 2.76 8.78 3.96L4.78 11.12C4.38 11.83 4.2 12.63 4.2 13.5C4.2 16.5 6.7 19 9.7 19C11.5 19 13.06 18.1 14 16.7C14.94 18.1 16.5 19 18.3 19C21.3 19 23.8 16.5 23.8 13.5C23.8 12.63 23.62 11.83 23.22 11.12L19.22 3.96C18.58 2.76 17.34 2 16 2C14.66 2 13.42 2.76 12.78 3.96L12 5.12L11.22 3.96C10.58 2.76 9.34 2 8 2M12 8.5C10.34 8.5 9 7.16 9 5.5C9 3.84 10.34 2.5 12 2.5C13.66 2.5 15 3.84 15 5.5C15 7.16 13.66 8.5 12 8.5Z" opacity="0"/>
+        <path d="M9 10.5a3 3 0 0 0-3 3c0 1.66 1.34 3 3 3h6c1.66 0 3-1.34 3-3a3 3 0 0 0-3-3H9Z" fill="white"/>
+        <circle cx="12" cy="5.5" r="2.5" fill="white"/>
+        <circle cx="6.5" cy="8.5" r="2.5" fill="white"/>
+        <circle cx="17.5" cy="8.5" r="2.5" fill="white"/>
+    </svg>
+</div>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-gray-800">FurFinder</span>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Home </a>
+                        <a href="adoption.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Adoption </a>
+                        <a href="lost_found.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Lost & Found </a>
+                        <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Services </a>
+                        <a href="shelters.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Shelters </a>
+                        <a href="donations.html" class="border-amber-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Donations </a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-4 md:flex md:items-center md:space-x-4">
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-150 ease-in-out"> Sign Up </button>
+                    <button class="border border-amber-500 text-amber-600 hover:bg-amber-50 px-4 py-2 rounded-full text-sm font-medium transition duration-150 ease-in-out"> Login </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10">
+        <div class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-extrabold text-gray-900 flex items-center">
+                    <i data-feather="gift" class="h-8 w-8 text-amber-500 mr-3"></i>
+                    Support Our Mission
+                </h1>
+                <p class="mt-2 text-lg text-gray-500">Every peso helps feed, shelter, and provide medical care to pets in need.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <div class="donation-option bg-white rounded-xl shadow-md p-8 transition duration-300 border-l-4 border-amber-500">
+                        <h2 class="text-2xl font-bold text-gray-900 flex items-center mb-4">
+                            <i data-feather="dollar-sign" class="h-6 w-6 text-amber-500 mr-2"></i> Financial Donation
+                        </h2>
+                        <p class="text-gray-600">Choose a flexible amount to contribute to our general fund, which covers emergency vet visits, food, and shelter upkeep.</p>
+                        <div class="mt-5 flex flex-wrap items-center gap-4">
+                            <button class="bg-amber-100 text-amber-800 font-semibold px-4 py-2 rounded-lg hover:bg-amber-200 transition">₱500</button>
+                            <button class="bg-amber-100 text-amber-800 font-semibold px-4 py-2 rounded-lg hover:bg-amber-200 transition">₱1,000</button>
+                            <button class="bg-amber-100 text-amber-800 font-semibold px-4 py-2 rounded-lg hover:bg-amber-200 transition">₱5,000</button>
+                            <input type="number" placeholder="Other Amount (PHP)" class="border p-2 rounded-lg w-48 text-sm focus:ring-amber-500 focus:border-amber-500">
+                            <button class="bg-amber-600 text-white font-medium px-6 py-2 rounded-lg shadow-md hover:bg-amber-700 transition">
+                                Donate Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-option bg-white rounded-xl shadow-md p-8 transition duration-300 border-l-4 border-blue-500">
+                        <h2 class="text-2xl font-bold text-gray-900 flex items-center mb-4">
+                            <i data-feather="box" class="h-6 w-6 text-blue-500 mr-2"></i> Shelter Wishlist
+                        </h2>
+                        <p class="text-gray-600">Donate physical goods like dry food, toys, blankets, and cleaning supplies directly to our partner shelters.</p>
+                        <a href="#" class="mt-5 inline-flex items-center px-4 py-2 border border-blue-500 text-sm font-medium rounded-full text-blue-600 bg-blue-50 hover:bg-blue-100 transition">
+                            View Current Wishlist <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-md h-fit">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Your Impact</h2>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="h-5 w-5 text-green-500 mr-3 mt-1"></i>
+                            <span>A gift of **₱500** provides one week of food for a small dog.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="h-5 w-5 text-green-500 mr-3 mt-1"></i>
+                            <span>A donation of **₱2,000** covers necessary vaccines for a newly rescued litter.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="h-5 w-5 text-green-500 mr-3 mt-1"></i>
+                            <span>**₱10,000** can fund a life-saving surgery for a critically injured pet.</span>
+                        </li>
+                    </ul>
+                    <a href="shelters.html" class="mt-6 block text-center text-sm font-medium text-amber-600 hover:text-amber-800">
+                        See where your money goes 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                    &copy; 2025 FurFinder. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>feather.replace();</script>
+</body>
+</html>
