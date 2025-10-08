@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Services - FurFinder</title>
+    <title>Shelters - FurFinder</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
         .nav-item:hover { transform: translateY(-2px); }
-        .service-card:hover { 
+        .shelter-card:hover { 
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
@@ -38,8 +38,8 @@
                         <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Home </a>
                         <a href="adoption.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Adoption </a>
                         <a href="lost_found.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Lost & Found </a>
-                        <a href="services.html" class="border-amber-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Services </a>
-                        <a href="shelters.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Shelters </a>
+                        <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Services </a>
+                        <a href="shelters.html" class="border-amber-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Shelters </a>
                         <a href="donations.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium nav-item transition duration-150 ease-in-out"> Donations </a>
                     </div>
                 </div>
@@ -60,74 +60,91 @@
         <div class="bg-white shadow-sm border-b border-gray-200">
             <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
                 <h1 class="text-3xl font-extrabold text-gray-900 flex items-center">
-                    <i data-feather="tool" class="h-8 w-8 text-amber-500 mr-3"></i>
-                    Pet Services Directory
+                    <i data-feather="home" class="h-8 w-8 text-amber-500 mr-3"></i>
+                    Partner Shelters & Rescues
                 </h1>
-                <p class="mt-2 text-lg text-gray-500">Find the best care providers for your pet near you—vets, groomers, trainers, and more.</p>
+                <p class="mt-2 text-lg text-gray-500">Connect directly with the local organizations dedicated to pet welfare.</p>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-start gap-3 mb-10 p-4 bg-white rounded-lg shadow-md">
-                <button class="bg-amber-600 text-white px-4 py-2 rounded-lg shadow-sm text-sm hover:bg-amber-700 transition">All Services</button>
-                <button class="bg-gray-100 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition">Veterinarians</button>
-                <button class="bg-gray-100 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition">Grooming</button>
-                <button class="bg-gray-100 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition">Training</button>
-                <button class="bg-gray-100 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-200 transition">Pet Sitting</button>
+             <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Find Shelters by Region</h2>
+                <div class="flex flex-wrap gap-3">
+                    <button class="bg-amber-500 text-white px-4 py-2 rounded-full text-sm shadow-md">All Regions</button>
+                    <button class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-sm hover:bg-gray-100">Baguio/Benguet</button>
+                    <button class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-sm hover:bg-gray-100">La Union</button>
+                    <button class="bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-sm hover:bg-gray-100">Pangasinan</button>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out border-t-4 border-amber-500">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900">City Animal Clinic</h3>
-                        <div class="mt-2 flex items-center text-sm">
-                            <i data-feather="tag" class="h-4 w-4 text-amber-500 mr-1"></i>
-                            <span class="text-amber-600 font-medium">Veterinarian</span>
+                <div class="shelter-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out p-6 border-l-4 border-amber-600">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-feather="heart" class="h-8 w-8 text-amber-600"></i>
                         </div>
-                        <p class="text-gray-600 mt-3">Full-service clinic with emergency hours. Specializing in small animals. Open 24/7 for emergencies.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
-                            <span><i data-feather="map-pin" class="h-4 w-4 inline mr-1"></i> Baguio City Center</span>
-                            <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-medium transition duration-150">
-                                Contact
-                            </a>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900">Baguio Animal Rescue</h3>
+                            <p class="text-sm text-gray-500">Baguio City | Non-Profit</p>
                         </div>
+                    </div>
+                    <p class="text-gray-700">Dedicated to rescuing, rehabilitating, and rehoming dogs and cats in the Cordillera region.</p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between">
+                        <a href="adoption.html" class="text-sm font-medium text-amber-600 hover:text-amber-800 flex items-center">
+                            View Pets <i data-feather="arrow-right" class="ml-1 h-4 w-4"></i>
+                        </a>
+                        <a href="donations.html" class="text-sm font-medium text-gray-800 hover:text-amber-600">
+                            Donate
+                        </a>
                     </div>
                 </div>
 
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out border-t-4 border-green-500">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900">Fluffy Tail Grooming</h3>
-                        <div class="mt-2 flex items-center text-sm">
-                            <i data-feather="scissors" class="h-4 w-4 text-green-500 mr-1"></i>
-                            <span class="text-green-600 font-medium">Grooming</span>
+                <div class="shelter-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out p-6 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-feather="feather" class="h-8 w-8 text-blue-500"></i>
                         </div>
-                        <p class="text-gray-600 mt-3">Professional grooming, de-shedding, and gentle nail care services. Treats included!</p>
-                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
-                            <span><i data-feather="map-pin" class="h-4 w-4 inline mr-1"></i> La Trinidad</span>
-                            <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-medium transition duration-150">
-                                Book Now
-                            </a>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900">Northern Paws Sanctuary</h3>
+                            <p class="text-sm text-gray-500">La Union | Farm & Exotic Animals</p>
                         </div>
+                    </div>
+                    <p class="text-gray-700">Provides long-term sanctuary for neglected farm animals, birds, and special needs domestic pets.</p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between">
+                        <a href="#" class="text-sm font-medium text-amber-600 hover:text-amber-800 flex items-center">
+                            Volunteer <i data-feather="arrow-right" class="ml-1 h-4 w-4"></i>
+                        </a>
+                        <a href="donations.html" class="text-sm font-medium text-gray-800 hover:text-amber-600">
+                            Donate
+                        </a>
+                    </div>
+                </div>
+
+                <div class="shelter-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out p-6 border-l-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i data-feather="home" class="h-8 w-8 text-green-500"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-gray-900">Pangasinan Street Cats</h3>
+                            <p class="text-sm text-gray-500">Dagupan | Feline Rescue</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">A dedicated TNR (Trap-Neuter-Return) and adoption program specifically for stray cats in Pangasinan.</p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between">
+                        <a href="adoption.html" class="text-sm font-medium text-amber-600 hover:text-amber-800 flex items-center">
+                            See Cats <i data-feather="arrow-right" class="ml-1 h-4 w-4"></i>
+                        </a>
+                        <a href="donations.html" class="text-sm font-medium text-gray-800 hover:text-amber-600">
+                            Donate
+                        </a>
                     </div>
                 </div>
                 
-                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out border-t-4 border-blue-500">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900">K9 Smart Training</h3>
-                        <div class="mt-2 flex items-center text-sm">
-                            <i data-feather="users" class="h-4 w-4 text-blue-500 mr-1"></i>
-                            <span class="text-blue-600 font-medium">Training</span>
-                        </div>
-                        <p class="text-gray-600 mt-3">Positive reinforcement classes for basic obedience and advanced behavior correction.</p>
-                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
-                            <span><i data-feather="map-pin" class="h-4 w-4 inline mr-1"></i> Tuba, Benguet</span>
-                            <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-medium transition duration-150">
-                                View Schedule
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
